@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".mdx"]
+      }
+    }
+  },
+  "extends": ["react-app", "react-app/jest", "prettier", "plugin:react-hooks/recommended"],
+  "plugins": ["prettier", "react", "react-hooks"],
+  "rules": {
+    "comma-dangle": "off",
+    "import/no-unresolved": "off",
+    "no-console": "off",
+    "no-plusplus": "off",
+    "react/no-danger": "off",
+    "arrow-body-style": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/jsx-no-bind": "off",
+    "no-nested-ternary": "off",
+    "react/destructuring-assignment": "off"
+  }
+}
