@@ -28,7 +28,7 @@ const SalesOverview = () => {
             toolbar: {
                 show: true,
             },
-            height: 370,
+            height: 350,
         },
         colors: [primary, secondary],
         plotOptions: {
@@ -107,7 +107,7 @@ const SalesOverview = () => {
                 options={optionscolumnchart}
                 series={seriescolumnchart}
                 type="bar"
-                height="370px"
+                height="350px"
             />
         </DashboardCard>
     );

@@ -24,6 +24,10 @@ const RecentTransactions = () => {
           sx={{
             p: 0,
             mb: '-40px',
+            '& .MuiTimelineConnector-root': {
+              width: '1px',
+              backgroundColor: '#efefef'
+            },
             [`& .${timelineOppositeContentClasses.root}`]: {
               flex: 0.5,
               paddingLeft: 0,
