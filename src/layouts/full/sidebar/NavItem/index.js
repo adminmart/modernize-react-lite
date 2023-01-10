@@ -10,12 +10,10 @@ import {
   ListItemText,
   useTheme
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 
 const NavItem = ({ item, level, pathDirect, onClick }) => {
   const Icon = item.icon;
   const theme = useTheme();
-  const { t } = useTranslation();
   const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
 
   const ListItemStyled = styled(ListItem)(() => ({
@@ -63,7 +61,7 @@ const NavItem = ({ item, level, pathDirect, onClick }) => {
           {itemIcon}
         </ListItemIcon>
         <ListItemText>
-          <>{t(`${item.title}`)}</>
+          <>{item.title}</>
         </ListItemText>
       </ListItemStyled>
     </List>

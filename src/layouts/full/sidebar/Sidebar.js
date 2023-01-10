@@ -1,6 +1,5 @@
 import { useMediaQuery, Box, Drawer } from '@mui/material';
-import Logo from '../../shared/logo/Logo';
-import Scrollbar from 'src/components/custom-scroll/Scrollbar';
+import Logo from '../shared/logo/Logo';
 import SidebarItems from './SidebarItems';
 import { Upgrade } from './Updrade';
 
@@ -46,13 +45,13 @@ const Sidebar = (props) => {
             <Box px={3}>
               <Logo />
             </Box>
-            <Scrollbar sx={{ height: 'calc(100% - 190px)' }}>
+            <Box>
               {/* ------------------------------------------- */}
               {/* Sidebar Items */}
               {/* ------------------------------------------- */}
               <SidebarItems />
               <Upgrade />
-            </Scrollbar>
+            </Box>
             
           </Box>
         </Drawer>
