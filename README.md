@@ -20,7 +20,7 @@ npm i
 2. Run Development Server
 
 ```
-npm run dev
+npm run start
 ```
 
 3. Build your project
