@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // components
 import Profile from './Profile';
-import { IconBellRinging, IconMenu } from '@tabler/icons';
+import { IconBellRinging, IconMenu } from '@tabler/icons-react';
 
 const Header = (props) => {
 
