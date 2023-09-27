@@ -1,77 +1,38 @@
 {
-  "name": "modernize",
-  "version": "0.1.0",
+  "name": "modernize-free-react-app-vite",
   "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@emotion/react": "11.11.1",
-    "@emotion/styled": "11.11.0",
-    "@mui/icons-material": "5.11.16",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/lab": "5.0.0-alpha.133",
     "@mui/material": "5.13.4",
-    "@mui/x-date-pickers": "6.7.0",
-    "@reduxjs/toolkit": "1.9.5",
-    "@tabler/icons-react": "2.22.0",
-    "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "14.0.0",
-    "@testing-library/user-event": "14.4.3",
-    "apexcharts": "3.41.0",
-    "chance": "1.1.11",
-    "lodash": "4.17.21",
-    "prop-types": "15.8.1",
-    "react": "18.2.0",
-    "react-apexcharts": "1.4.0",
-    "react-dom": "18.2.0",
-    "react-helmet": "6.1.0",
-    "react-router": "6.12.1",
-    "react-router-dom": "6.12.1",
-    "react-scripts": "5.0.1",
-    "react-spring": "9.7.1",
-    "stylis-plugin-rtl": "2.1.1",
-    "web-vitals": "3.3.2",
-    "yup": "1.2.0"
+    "@mui/system": "^5.14.11",
+    "@svgr/rollup": "^8.1.0",
+    "@tabler/icons-react": "^2.35.0",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.1",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-router": "^6.16.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
-    "@babel/core": "7.22.5",
-    "@babel/eslint-parser": "7.22.5",
-    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-env": "7.22.5",
-    "eslint": "8.42.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "8.8.0",
-    "eslint-config-react-app": "7.0.1",
-    "eslint-plugin-flowtype": "8.0.3",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.32.2",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "prettier": "2.8.8"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "overrides": {
-    "nth-check": "2.1.1"
+    "@types/react": "^18.2.15",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
   }
 }
