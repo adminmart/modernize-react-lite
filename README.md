@@ -3,7 +3,7 @@ Modernize Free React admin Template
 
 <!-- Main image of Template -->
 <a target="_blank" href="https://adminmart.com/product/modernize-free-react-mui-dashboard/?ref=5">
-  <img src="https://adminmart.com/wp-content/uploads/2023/01/modernize-free-react-admin-dashboard-am.png" />
+  <img src="https://adminmart.com/wp-content/uploads/2023/01/modernize-free-react-admin-dashboard-am-min.png" />
 </a>
 
 
@@ -44,7 +44,7 @@ npm run build
     <a href="https://modernize-react-free.netlify.app/dashboard/?ref=5">Live Preview</a>
   </td>
   <td>
-  <a href="https://modernize-react.adminmart.com/landingpage/?ref=5">Live Preview</a>
+  <a href="https://modernize-react.adminmart.com/dashboards/modern/?ref=5">Live Preview</a>
   </td>
 </tr>
 <tr>
@@ -168,8 +168,8 @@ npm run build
 <table>
 <thead>
 <tr>
-<th>Bootstrap</th>
 <th>React</th>
+<th>Bootstrap</th>
 <th>Vue</th>
 <th>Nuxt Js</th>
 </tr>
@@ -177,13 +177,13 @@ npm run build
 <tbody>
 <tr>
 <td>
-  <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=5" rel="nofollow" width="150px">
-    <img src="https://adminmart.com/wp-content/uploads/2023/02/modernize-bootstrap-5-admin-template.png" alt="" style="max-width:150px;">
+  <a href="https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=5" rel="nofollow" width="150px">
+    <img src="https://adminmart.com/wp-content/uploads/2023/01/image_2023_01_26T10_19_25_019Z-min.png" alt="" style="max-width:150px;">
   </a>
 </td>
 <td>
-  <a href="https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=5" rel="nofollow" width="150px">
-    <img src="https://adminmart.com/wp-content/uploads/2023/01/image_2023_01_26T10_19_25_019Z.png" alt="" style="max-width:150px;">
+  <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=5" rel="nofollow" width="150px">
+    <img src="https://adminmart.com/wp-content/uploads/2023/02/modernize-bootstrap-5-admin-template-min.png" alt="" style="max-width:150px;">
   </a>
 </td>
 <td>
@@ -204,11 +204,11 @@ npm run build
 # Upgrade to Premium version
 
 <a target="_blank" href="https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=5">
-  <img src="https://adminmart.com/wp-content/uploads/2023/01/image_2023_01_26T10_19_25_019Z.png" alt="">
+  <img src="https://adminmart.com/wp-content/uploads/2023/01/image_2023_01_26T10_19_25_019Z-min.png" alt="">
 </a>
 <p>
   Checkout our premium version of Modernize React Admin Lite for lots more features and ready to use page templates.<br>
-  <a href="https://modernize-react.adminmart.com/landingpage/?ref=5">Check Live Preview</a> | <a href="https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=5">Download</a>
+  <a href="https://modernize-react.adminmart.com/dashboards/modern/?ref=5">Check Live Preview</a> | <a href="https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=5">Download</a>
 </p>
 
 
