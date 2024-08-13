@@ -9,6 +9,19 @@ const MSidebar = (props) => {
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
   const sidebarWidth = '270px';
 
+  // Custom CSS for short scrollbar
+  const scrollbarStyles = {
+    '&::-webkit-scrollbar': {
+      width: '7px',
+
+    },
+    '&::-webkit-scrollbar-thumb': {
+      backgroundColor: '#eff2f7',
+      borderRadius: '15px',
+    },
+  };
+
+
   if (lgUp) {
     return (
       <Box
@@ -26,8 +39,8 @@ const MSidebar = (props) => {
           variant="permanent"
           PaperProps={{
             sx: {
-
               boxSizing: 'border-box',
+              ...scrollbarStyles,
             },
           }}
         >
@@ -75,6 +88,7 @@ const MSidebar = (props) => {
         sx: {
 
           boxShadow: (theme) => theme.shadows[8],
+          ...scrollbarStyles,
         },
       }}
     >
