@@ -1,12 +1,11 @@
 import { useMediaQuery, Box, Drawer } from '@mui/material';
-import Logo from '../shared/logo/Logo';
 import SidebarItems from './SidebarItems';
 import { Upgrade } from './Updrade';
+import { Sidebar, Logo } from 'react-mui-sidebar';
 
-const Sidebar = (props) => {
+const MSidebar = (props) => {
 
   const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
-
   const sidebarWidth = '270px';
 
   if (lgUp) {
@@ -26,7 +25,7 @@ const Sidebar = (props) => {
           variant="permanent"
           PaperProps={{
             sx: {
-              width: sidebarWidth,
+
               boxSizing: 'border-box',
             },
           }}
@@ -39,26 +38,33 @@ const Sidebar = (props) => {
               height: '100%',
             }}
           >
-            {/* ------------------------------------------- */}
-            {/* Logo */}
-            {/* ------------------------------------------- */}
-            <Box px={3}>
-              <Logo />
-            </Box>
-            <Box>
+
+            <Sidebar
+              width={'270px'}
+              collapsewidth="80px"
+              open={props.isSidebarOpen}
+              themeColor="#5d87ff"
+              themeSecondaryColor="#49beff"
+              showProfile={false}
+            >
               {/* ------------------------------------------- */}
-              {/* Sidebar Items */}
+              {/* Logo */}
               {/* ------------------------------------------- */}
-              <SidebarItems />
-              <Upgrade />
-            </Box>
-            
+
+              <Logo img="src/assets/images/logos/dark1-logo.svg" />
+              <Box>
+                {/* ------------------------------------------- */}
+                {/* Sidebar Items */}
+                {/* ------------------------------------------- */}
+                <SidebarItems />
+                <Upgrade />
+              </Box>
+            </Sidebar >
           </Box>
-        </Drawer>
-      </Box>
+        </Drawer >
+      </Box >
     );
   }
-
   return (
     <Drawer
       anchor="left"
@@ -67,24 +73,33 @@ const Sidebar = (props) => {
       variant="temporary"
       PaperProps={{
         sx: {
-          width: sidebarWidth,
+
           boxShadow: (theme) => theme.shadows[8],
         },
       }}
     >
-      {/* ------------------------------------------- */}
-      {/* Logo */}
-      {/* ------------------------------------------- */}
-      <Box px={2}>
-        <Logo />
-      </Box>
-      {/* ------------------------------------------- */}
-      {/* Sidebar For Mobile */}
-      {/* ------------------------------------------- */}
-      <SidebarItems />
-      <Upgrade />
+      <Sidebar
+        width={'270px'}
+        collapsewidth="80px"
+        isCollapse={false}
+        mode="light"
+        direction="ltr"
+        themeColor="#5d87ff"
+        themeSecondaryColor="#49beff"
+        showProfile={false}
+      >
+        {/* ------------------------------------------- */}
+        {/* Logo */}
+        {/* ------------------------------------------- */}
+        <Logo img="src/assets/images/logos/dark1-logo.svg" />
+
+        {/* ------------------------------------------- */}
+        {/* Sidebar For Mobile */}
+        {/* ------------------------------------------- */}
+        <SidebarItems />
+        <Upgrade />
+      </Sidebar>
     </Drawer>
   );
 };
-
-export default Sidebar;
+export default MSidebar;
