@@ -51,7 +51,8 @@ const MSidebar = (props) => {
               {/* Logo */}
               {/* ------------------------------------------- */}
 
-              <Logo img="src/assets/images/logos/dark1-logo.svg" />
+              <Logo img="/src/assets/images/logos/dark1-logo.svg" />
+
               <Box>
                 {/* ------------------------------------------- */}
                 {/* Sidebar Items */}
@@ -91,7 +92,7 @@ const MSidebar = (props) => {
         {/* ------------------------------------------- */}
         {/* Logo */}
         {/* ------------------------------------------- */}
-        <Logo img="src/assets/images/logos/dark1-logo.svg" />
+        <Logo img="/src/assets/images/logos/dark1-logo.svg" />
 
         {/* ------------------------------------------- */}
         {/* Sidebar For Mobile */}
