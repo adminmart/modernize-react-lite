@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 // mui imports
 import {
   ListItemIcon,
@@ -29,7 +29,7 @@ const NavItem = ({ item, level, pathDirect, onClick }) => {
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.primary.main,
     },
-    '&.Mui-selected': {
+    '&.active': {
       color: 'white',
       backgroundColor: theme.palette.primary.main,
       '&:hover': {

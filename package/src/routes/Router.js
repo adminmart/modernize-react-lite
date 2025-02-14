@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
-import { Navigate } from 'react-router-dom';
 import Loadable from '../layouts/full/shared/loadable/Loadable';
+import { createBrowserRouter, Navigate } from 'react-router';
 
 /* ***Layouts**** */
 const FullLayout = Loadable(lazy(() => import('../layouts/full/FullLayout')));
@@ -42,4 +42,6 @@ const Router = [
   },
 ];
 
-export default Router;
+const router = createBrowserRouter(Router);
+
+export default router;

@@ -6,8 +6,8 @@ import NavItem from './NavItem';
 import NavGroup from './NavGroup/NavGroup';
 
 const SidebarItems = () => {
-  const { pathname } = useLocation();
-  const pathDirect = pathname;
+  const location = useLocation();
+  const pathDirect = location.pathname;
 
   return (
     <Box sx={{ px: 3 }}>

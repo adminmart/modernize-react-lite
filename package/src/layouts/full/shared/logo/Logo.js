@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { ReactComponent as LogoDark1 } from "src/assets/images/logos/dark1-logo.svg";
 import { styled } from "@mui/material";
 

@@ -4,20 +4,18 @@
 // import './App.css'
 
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { useRoutes } from 'react-router-dom';
-import Router from './routes/Router';
 
 import { baselightTheme } from "./theme/DefaultColors";
+import { RouterProvider } from 'react-router';
+import router from "./routes/Router.js"
 
 function App() {
-  
-  const routing = useRoutes(Router);
   const theme = baselightTheme;
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      {routing}
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }

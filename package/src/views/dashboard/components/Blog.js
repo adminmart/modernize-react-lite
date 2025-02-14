@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { CardContent, Typography, Grid, Rating, Tooltip, Fab } from '@mui/material';
 import img1 from 'src/assets/images/products/s4.jpg';
 import img2 from 'src/assets/images/products/s5.jpg';
@@ -12,7 +12,7 @@ import BlankCard from '../../../components/shared/BlankCard';
 const ecoCard = [
     {
         title: 'Boat Headphone',
-        subheader: 'September 14, 2023',
+        subheader: 'September 14, 2025',
         photo: img1,
         salesPrice: 375,
         price: 285,
@@ -20,7 +20,7 @@ const ecoCard = [
     },
     {
         title: 'MacBook Air Pro',
-        subheader: 'September 14, 2023',
+        subheader: 'September 14, 2025',
         photo: img2,
         salesPrice: 650,
         price: 900,
@@ -28,7 +28,7 @@ const ecoCard = [
     },
     {
         title: 'Red Valvet Dress',
-        subheader: 'September 14, 2023',
+        subheader: 'September 14, 2025',
         photo: img3,
         salesPrice: 150,
         price: 200,
@@ -36,7 +36,7 @@ const ecoCard = [
     },
     {
         title: 'Cute Soft Teddybear',
-        subheader: 'September 14, 2023',
+        subheader: 'September 14, 2025',
         photo: img4,
         salesPrice: 285,
         price: 345,
