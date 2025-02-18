@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-// mui imports
+
 import { ListSubheader, styled } from '@mui/material';
 import { IconDots } from '@tabler/icons-react';
 
@@ -21,9 +20,5 @@ const NavGroup = ({ item, hideMenu }) => {
   );
 };
 
-NavGroup.propTypes = {
-  item: PropTypes.object,
-  hideMenu: PropTypes.any,
-};
 
 export default NavGroup;
