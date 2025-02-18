@@ -1,6 +1,7 @@
 import { useMediaQuery, Box, Drawer } from '@mui/material';
 import SidebarItems from './SidebarItems';
 import { Upgrade } from './Updrade';
+import { Sidebar, Logo } from 'react-mui-sidebar';
 import logo from '../../../assets/images/logos/dark1-logo.svg'
 
 const MSidebar = (props) => {
@@ -51,16 +52,27 @@ const MSidebar = (props) => {
               height: '100%',
             }}
           >
-              <Box sx={{paddingTop:2.5, paddingX:3}} >
-              <img src={logo} />
-              </Box>
-              <Box sx={{width:"270px"}} >
+
+            <Sidebar
+              width={'270px'}
+              collapsewidth="80px"
+              open={props.isSidebarOpen}
+              themeColor="#5d87ff"
+              themeSecondaryColor="#49beff"
+              showProfile={false}
+            >
+              {/* ------------------------------------------- */}
+              {/* Logo */}
+              {/* ------------------------------------------- */}
+              <Logo img={logo} />
+              <Box>
                 {/* ------------------------------------------- */}
                 {/* Sidebar Items */}
                 {/* ------------------------------------------- */}
                 <SidebarItems />
                 <Upgrade />
               </Box>
+            </Sidebar >
           </Box>
         </Drawer >
       </Box >
@@ -80,22 +92,28 @@ const MSidebar = (props) => {
         },
       }}
     >
-<Box
-            sx={{
-              height: '100%',
-            }}
-          >
-              <Box sx={{paddingTop:2.5, paddingX:3}} >
-              <img src={logo} />
-              </Box>
-              <Box sx={{width:"270px"}} >
-                {/* ------------------------------------------- */}
-                {/* Sidebar Items */}
-                {/* ------------------------------------------- */}
-                <SidebarItems />
-                <Upgrade />
-              </Box>
-          </Box>
+      <Sidebar
+        width={'270px'}
+        collapsewidth="80px"
+        isCollapse={false}
+        mode="light"
+        direction="ltr"
+        themeColor="#5d87ff"
+        themeSecondaryColor="#49beff"
+        showProfile={false}
+      >
+        {/* ------------------------------------------- */}
+        {/* Logo */}
+        {/* ------------------------------------------- */}
+
+        <Logo img={logo} />
+
+        {/* ------------------------------------------- */}
+        {/* Sidebar For Mobile */}
+        {/* ------------------------------------------- */}
+        <SidebarItems />
+        <Upgrade />
+      </Sidebar>
     </Drawer>
   );
 };
