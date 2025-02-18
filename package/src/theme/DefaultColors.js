@@ -9,11 +9,14 @@ const baselightTheme = createTheme({
       main: '#5D87FF',
       light: '#ECF2FF',
       dark: '#4570EA',
+      contrastText: '#ffffff',
+      transparent: "#ffffff00"
     },
     secondary: {
       main: '#49BEFF',
       light: '#E8F7FF',
       dark: '#23afdb',
+      contrastText: '#ffffff',
     },
     success: {
       main: '#13DEB9',

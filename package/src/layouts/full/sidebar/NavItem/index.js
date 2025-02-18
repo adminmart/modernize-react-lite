@@ -1,3 +1,8 @@
+
+
+
+
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router';
@@ -8,23 +13,26 @@ import {
   List,
   styled,
   ListItemText,
-  useTheme
+  Chip,
+  useTheme,
+  Typography,
 } from '@mui/material';
 
-const NavItem = ({ item, level, pathDirect, onClick }) => {
+const NavItem = ({ item, level, pathDirect, onClick, hideMenu }) => {
   const Icon = item.icon;
   const theme = useTheme();
-  const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
+  const itemIcon =
+    level > 1 ? <Icon stroke={1.5} size="1rem" /> : <Icon stroke={1.5} size="1.3rem" />;
 
   const ListItemStyled = styled(ListItem)(() => ({
     whiteSpace: 'nowrap',
     marginBottom: '2px',
     padding: '8px 10px',
-    borderRadius: '8px',
+    borderRadius: `7px`,
     backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
     color:
-      theme.palette.text.secondary,
-    paddingLeft: '10px',
+      level > 1 && pathDirect === item.href ? `${theme.palette.primary.main}!important` : theme.palette.text.secondary,
+    paddingLeft: hideMenu ? '10px' : level > 2 ? `${level * 15}px` : '10px',
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.primary.main,
@@ -42,27 +50,54 @@ const NavItem = ({ item, level, pathDirect, onClick }) => {
   return (
     <List component="li" disablePadding key={item.id}>
       <ListItemStyled
-        button
+        button="true"
         component={item.external ? 'a' : NavLink}
         to={item.href}
         href={item.external ? item.href : ''}
+        target={item.chip?"blank" :"_self"}
         disabled={item.disabled}
         selected={pathDirect === item.href}
-        target={item.external ? '_blank' : ''}
         onClick={onClick}
       >
         <ListItemIcon
           sx={{
             minWidth: '36px',
             p: '3px 0',
-            color: 'inherit',
+            color:
+              level > 1 && pathDirect === item.href
+                ? `${theme.palette.primary.main}!important`
+                : 'inherit',
           }}
         >
           {itemIcon}
         </ListItemIcon>
         <ListItemText>
-          <>{item.title}</>
+          {hideMenu ? '' : <>{(`${item.title}`)}</>}
+          <br />
+          {item.subtitle ? (
+            <Typography variant="caption">{hideMenu ? '' : item.subtitle}</Typography>
+          ) : (
+            ''
+          )}
         </ListItemText>
+
+        {!item.chip || hideMenu ? null : (
+          <Chip
+            color={"secondary"}
+            variant={'filled'}
+            size="small"
+            label={"Pro"}
+            sx={{
+              height: 'fit-content', 
+             
+              borderRadius:"7px",
+              '& .MuiChip-label': {
+                fontSize:"10px",
+                paddingX:"10px",
+              },
+            }}
+          />
+        )}
       </ListItemStyled>
     </List>
   );
@@ -72,6 +107,8 @@ NavItem.propTypes = {
   item: PropTypes.object,
   level: PropTypes.number,
   pathDirect: PropTypes.any,
+  hideMenu: PropTypes.any,
+  onClick: PropTypes.func,
 };
 
 export default NavItem;

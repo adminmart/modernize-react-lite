@@ -6,6 +6,7 @@ import { styled, Container, Box } from '@mui/material';
 import Header from './header/Header';
 import Sidebar from './sidebar/Sidebar';
 import { Outlet } from "react-router";
+import Topbar from "./header/Topbar";
 
 const MainWrapper = styled('div')(() => ({
   display: 'flex',
@@ -29,15 +30,23 @@ const FullLayout = () => {
   // const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
 
   return (
+    <>
+      {/* ------------------------------------------- */}
+      {/* Topbar */}
+      {/* ------------------------------------------- */}
+      <Topbar/>
     <MainWrapper
       className='mainwrapper'
     >
+
       {/* ------------------------------------------- */}
       {/* Sidebar */}
       {/* ------------------------------------------- */}
       <Sidebar isSidebarOpen={isSidebarOpen}
         isMobileSidebarOpen={isMobileSidebarOpen}
         onSidebarClose={() => setMobileSidebarOpen(false)} />
+
+
       {/* ------------------------------------------- */}
       {/* Main Wrapper */}
       {/* ------------------------------------------- */}
@@ -68,6 +77,7 @@ const FullLayout = () => {
         </Container>
       </PageWrapper>
     </MainWrapper>
+    </>
   );
 };
 
