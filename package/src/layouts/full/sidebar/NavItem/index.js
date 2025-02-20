@@ -29,7 +29,7 @@ const NavItem = ({ item, level, pathDirect, onClick, hideMenu }) => {
     marginBottom: '2px',
     padding: '8px 10px',
     borderRadius: `7px`,
-    backgroundColor: level > 1 ? 'transparent !important' : 'inherit',
+    backgroundColor: level > 1 ? 'transparent !important' : 'primary',
     color:
       level > 1 && pathDirect === item.href ? `${theme.palette.primary.main}!important` : theme.palette.text.secondary,
     paddingLeft: hideMenu ? '10px' : level > 2 ? `${level * 15}px` : '10px',

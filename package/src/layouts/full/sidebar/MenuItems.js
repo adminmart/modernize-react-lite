@@ -91,7 +91,7 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Front pages',
+    title: 'Front',
     icon: IconAppWindow,
     href: 'https://modernize-react.adminmart.com/frontend-pages/',
     chip: 'Pro',
