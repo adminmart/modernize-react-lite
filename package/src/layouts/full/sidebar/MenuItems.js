@@ -994,23 +994,19 @@ const Menuitems = [
     title: 'Login',
     icon: IconLogin,
     href: 'https://modernize-react.adminmart.com/auth/login',
-    chip: 'Pro',
     children: [
       {
         id: uniqueId(),
         title: 'Side Login',
         icon: IconPoint,
         href: 'https://modernize-react.adminmart.com/auth/login',
-
         chip: 'Pro',
       },
       {
         id: uniqueId(),
         title: 'Boxed Login',
         icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/auth/login2',
-
-        chip: 'Pro',
+        href: '/auth/login',
       },
     ],
   },
@@ -1019,23 +1015,19 @@ const Menuitems = [
     title: 'Register',
     icon: IconUserPlus,
     href: 'https://modernize-react.adminmart.com/auth/register',
-    chip: 'Pro',
     children: [
       {
         id: uniqueId(),
         title: 'Side Register',
         icon: IconPoint,
         href: 'https://modernize-react.adminmart.com/auth/register',
-
         chip: 'Pro',
       },
       {
         id: uniqueId(),
         title: 'Boxed Register',
         icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/auth/register2',
-
-        chip: 'Pro',
+        href: '/auth/register',
       },
     ],
   },
