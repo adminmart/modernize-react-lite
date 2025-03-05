@@ -58,6 +58,8 @@ import {
   IconChartPpf,
   IconChartArcs3,
   IconListTree,
+  IconLayoutSidebar,
+  IconLock,
 } from '@tabler/icons-react';
 
 
@@ -91,7 +93,7 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Front',
+    title: 'Frontend pages',
     icon: IconAppWindow,
     href: 'https://modernize-react.adminmart.com/frontend-pages/',
     chip: 'Pro',
@@ -149,6 +151,39 @@ const Menuitems = [
   },
   {
     navlabel: true,
+    subheader: 'Utilities',
+  },
+  {
+    id: uniqueId(),
+    title: 'Typography',
+    icon: IconTypography,
+    href: '/ui/typography',
+  },
+  {
+    id: uniqueId(),
+    title: 'Shadow',
+    icon: IconCopy,
+    href: '/ui/shadow',
+  },
+
+  {
+    navlabel: true,
+    subheader: 'Extra',
+  },
+  {
+    id: uniqueId(),
+    title: 'Icons',
+    icon: IconMoodHappy,
+    href: '/icons',
+  },
+  {
+    id: uniqueId(),
+    title: 'Sample Page',
+    icon: IconAperture,
+    href: '/sample-page',
+  },
+  {
+    navlabel: true,
     subheader: 'Apps',
   },
   {
@@ -160,6 +195,91 @@ const Menuitems = [
     chip: 'Pro',
   },
 
+
+  {
+    id: uniqueId(),
+    title: 'Chats',
+    icon: IconMessage2,
+    href: 'https://modernize-react.adminmart.com/apps/chats',
+    chip: 'Pro',
+  },
+
+  {
+    id: uniqueId(),
+    title: 'Notes',
+    icon: IconNotes,
+    href: 'https://modernize-react.adminmart.com/apps/notes',
+    chip: 'Pro',
+  },
+  {
+    id: uniqueId(),
+    title: 'Calendar',
+    icon: IconCalendar,
+    href: 'https://modernize-react.adminmart.com/apps/calendar',
+    chip: 'Pro',
+  },
+  {
+    id: uniqueId(),
+    title: 'Email',
+    icon: IconMail,
+    href: 'https://modernize-react.adminmart.com/apps/email',
+    chip: 'Pro',
+  },
+  {
+    id: uniqueId(),
+    title: 'Tickets',
+    icon: IconTicket,
+    href: 'https://modernize-react.adminmart.com/apps/tickets',
+    chip: 'Pro',
+  },
+  {
+    id: uniqueId(),
+    title: 'Kanban',
+    icon: IconNotebook,
+    href: 'https://modernize-react.adminmart.com/apps/kanban',
+    chip: 'Pro',
+  },
+  {
+    id: uniqueId(),
+    title: 'Users',
+    icon: IconUserCircle,
+    href: 'https://modernize-react.adminmart.com/user-profile',
+    chip: 'Pro',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Profile',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/user-profile',
+
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Followers',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/apps/followers',
+
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Friends',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/apps/friends',
+
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Gallery',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/apps/gallery',
+
+        chip: 'Pro',
+      },
+    ],
+  },
   {
     id: uniqueId(),
     title: 'Blog',
@@ -244,90 +364,6 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Chats',
-    icon: IconMessage2,
-    href: 'https://modernize-react.adminmart.com/apps/chats',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Users',
-    icon: IconUserCircle,
-    href: 'https://modernize-react.adminmart.com/user-profile',
-    chip: 'Pro',
-    children: [
-      {
-        id: uniqueId(),
-        title: 'Profile',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/user-profile',
-
-        chip: 'Pro',
-      },
-      {
-        id: uniqueId(),
-        title: 'Followers',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/apps/followers',
-
-        chip: 'Pro',
-      },
-      {
-        id: uniqueId(),
-        title: 'Friends',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/apps/friends',
-
-        chip: 'Pro',
-      },
-      {
-        id: uniqueId(),
-        title: 'Gallery',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/apps/gallery',
-
-        chip: 'Pro',
-      },
-    ],
-  },
-  {
-    id: uniqueId(),
-    title: 'Notes',
-    icon: IconNotes,
-    href: 'https://modernize-react.adminmart.com/apps/notes',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Calendar',
-    icon: IconCalendar,
-    href: 'https://modernize-react.adminmart.com/apps/calendar',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Email',
-    icon: IconMail,
-    href: 'https://modernize-react.adminmart.com/apps/email',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Tickets',
-    icon: IconTicket,
-    href: 'https://modernize-react.adminmart.com/apps/tickets',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Kanban',
-    icon: IconNotebook,
-    href: 'https://modernize-react.adminmart.com/apps/kanban',
-    chip: 'Pro',
-  },
-
-  {
-    id: uniqueId(),
     title: 'Invoice',
     icon: IconFileCheck,
     href: 'https://modernize-react.adminmart.com/apps/invoice/list',
@@ -374,32 +410,42 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Pricing',
-    icon: IconCurrencyDollar,
+    title: 'Pages',
+    icon: IconLayoutSidebar,
     href: 'https://modernize-react.adminmart.com/pages/pricing',
     chip: 'Pro',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Pricing',
+        icon: IconCurrencyDollar,
+        href: 'https://modernize-react.adminmart.com/pages/pricing',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Account Setting',
+        icon: IconUserCircle,
+        href: 'https://modernize-react.adminmart.com/pages/account-settings',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'FAQ',
+        icon: IconHelp,
+        href: 'https://modernize-react.adminmart.com/pages/faq',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Landingpage',
+        icon: IconAppWindow,
+        href: 'https://modernize-react.adminmart.com/landingpage',
+        chip: 'Pro',
+      },
+    ]
   },
-  {
-    id: uniqueId(),
-    title: 'Account Setting',
-    icon: IconUserCircle,
-    href: 'https://modernize-react.adminmart.com/pages/account-settings',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'FAQ',
-    icon: IconHelp,
-    href: 'https://modernize-react.adminmart.com/pages/faq',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Landingpage',
-    icon: IconAppWindow,
-    href: 'https://modernize-react.adminmart.com/landingpage',
-    chip: 'Pro',
-  },
+
   {
     id: uniqueId(),
     title: 'Widgets',
@@ -557,46 +603,56 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: 'Basic',
+    title: 'Tables',
     icon: IconBorderAll,
     href: 'https://modernize-react.adminmart.com/tables/basic',
     chip: 'Pro',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Basic',
+        icon: IconBorderAll,
+        href: 'https://modernize-react.adminmart.com/tables/basic',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Collapsible',
+        icon: IconBorderHorizontal,
+        href: 'https://modernize-react.adminmart.com/tables/collapsible',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Enhanced',
+        icon: IconBorderInner,
+        href: 'https://modernize-react.adminmart.com/tables/enhanced',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Fixed Header',
+        icon: IconBorderVertical,
+        href: 'https://modernize-react.adminmart.com/tables/fixed-header',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Pagination',
+        icon: IconBorderTop,
+        href: 'https://modernize-react.adminmart.com/tables/pagination',
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Search',
+        icon: IconBorderStyle2,
+        href: 'https://modernize-react.adminmart.com/tables/search',
+        chip: 'Pro',
+      },
+    ]
   },
-  {
-    id: uniqueId(),
-    title: 'Collapsible',
-    icon: IconBorderHorizontal,
-    href: 'https://modernize-react.adminmart.com/tables/collapsible',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Enhanced',
-    icon: IconBorderInner,
-    href: 'https://modernize-react.adminmart.com/tables/enhanced',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Fixed Header',
-    icon: IconBorderVertical,
-    href: 'https://modernize-react.adminmart.com/tables/fixed-header',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Pagination',
-    icon: IconBorderTop,
-    href: 'https://modernize-react.adminmart.com/tables/pagination',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Search',
-    icon: IconBorderStyle2,
-    href: 'https://modernize-react.adminmart.com/tables/search',
-    chip: 'Pro',
-  },
+
   {
     id: uniqueId(),
     title: 'React Table',
@@ -714,31 +770,7 @@ const Menuitems = [
     href: 'https://modernize-react.adminmart.com/muicharts/barcharts',
     chip: 'Pro',
   },
-  {
-    id: uniqueId(),
-    title: 'LineCharts',
-    icon: IconChartLine,
-    href: 'https://modernize-react.adminmart.com/muicharts/linecharts/line',
-    chip: 'Pro',
-    children: [
-      {
-        id: uniqueId(),
-        title: 'Lines',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/muicharts/linecharts/line',
 
-        chip: 'Pro',
-      },
-      {
-        id: uniqueId(),
-        title: 'Area',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/muicharts/linecharts/area',
-
-        chip: 'Pro',
-      },
-    ],
-  },
   {
     id: uniqueId(),
     title: 'PieCharts',
@@ -767,7 +799,31 @@ const Menuitems = [
     href: 'https://modernize-react.adminmart.com/muicharts/gaugecharts',
     chip: 'Pro',
   },
+  {
+    id: uniqueId(),
+    title: 'LineCharts',
+    icon: IconChartLine,
+    href: 'https://modernize-react.adminmart.com/muicharts/linecharts/line',
+    chip: 'Pro',
+    children: [
+      {
+        id: uniqueId(),
+        title: 'Lines',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/muicharts/linecharts/line',
 
+        chip: 'Pro',
+      },
+      {
+        id: uniqueId(),
+        title: 'Area',
+        icon: IconPoint,
+        href: 'https://modernize-react.adminmart.com/muicharts/linecharts/area',
+
+        chip: 'Pro',
+      },
+    ],
+  },
   {
     navlabel: true,
     subheader: 'Mui Trees',
@@ -988,12 +1044,24 @@ const Menuitems = [
     navlabel: true,
     subheader: 'Auth',
   },
-
   {
     id: uniqueId(),
     title: 'Login',
     icon: IconLogin,
-    href: 'https://modernize-react.adminmart.com/auth/login',
+    href: '/auth/login',
+  },
+  {
+    id: uniqueId(),
+    title: 'Register',
+    icon: IconUserCircle,
+    href: '/auth/register',
+  },
+  {
+    id: uniqueId(),
+    title: 'Auth Pages',
+    icon: IconLock,
+    href: '/auth/login',
+    chip: 'Pro',
     children: [
       {
         id: uniqueId(),
@@ -1004,20 +1072,6 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
-        title: 'Boxed Login',
-        icon: IconPoint,
-        href: '/auth/login',
-      },
-    ],
-  },
-  {
-    id: uniqueId(),
-    title: 'Register',
-    icon: IconUserPlus,
-    href: 'https://modernize-react.adminmart.com/auth/register',
-    children: [
-      {
-        id: uniqueId(),
         title: 'Side Register',
         icon: IconPoint,
         href: 'https://modernize-react.adminmart.com/auth/register',
@@ -1025,76 +1079,67 @@ const Menuitems = [
       },
       {
         id: uniqueId(),
-        title: 'Boxed Register',
-        icon: IconPoint,
-        href: '/auth/register',
-      },
-    ],
-  },
-  {
-    id: uniqueId(),
-    title: 'Forgot Password',
-    icon: IconRotate,
-    href: 'https://modernize-react.adminmart.com/auth/forgot-password',
-    chip: 'Pro',
-    children: [
-      {
-        id: uniqueId(),
-        title: 'Side Forgot Password',
-        icon: IconPoint,
+        title: 'Forgot Pwd',
+        icon: IconRotate,
         href: 'https://modernize-react.adminmart.com/auth/forgot-password',
-
         chip: 'Pro',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Side Frt Pwd',
+            icon: IconPoint,
+            href: 'https://modernize-react.adminmart.com/auth/forgot-password',
+            chip: 'Pro',
+          },
+          {
+            id: uniqueId(),
+            title: 'Boxed Frt Pwd',
+            icon: IconPoint,
+            href: 'https://modernize-react.adminmart.com/auth/forgot-password2',
+            chip: 'Pro',
+          },
+        ],
       },
+
       {
         id: uniqueId(),
-        title: 'Boxed Forgot Password',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/auth/forgot-password2',
-
-        chip: 'Pro',
-      },
-    ],
-  },
-
-  {
-    id: uniqueId(),
-    title: 'Two Steps',
-    icon: IconZoomCode,
-    href: 'https://modernize-react.adminmart.com/auth/two-steps',
-    chip: 'Pro',
-    children: [
-      {
-        id: uniqueId(),
-        title: 'Side Two Steps',
-        icon: IconPoint,
+        title: 'Two Steps',
+        icon: IconZoomCode,
         href: 'https://modernize-react.adminmart.com/auth/two-steps',
         chip: 'Pro',
+        children: [
+          {
+            id: uniqueId(),
+            title: 'Side Two Steps',
+            icon: IconPoint,
+            href: 'https://modernize-react.adminmart.com/auth/two-steps',
+            chip: 'Pro',
+          },
+          {
+            id: uniqueId(),
+            title: 'Boxed Two Steps',
+            icon: IconPoint,
+            href: 'https://modernize-react.adminmart.com/auth/two-steps2',
+            chip: 'Pro',
+          },
+        ],
       },
       {
         id: uniqueId(),
-        title: 'Boxed Two Steps',
-        icon: IconPoint,
-        href: 'https://modernize-react.adminmart.com/auth/two-steps2',
+        title: 'Error',
+        icon: IconAlertCircle,
+        href: 'https://modernize-react.adminmart.com/400',
         chip: 'Pro',
       },
-    ],
+      {
+        id: uniqueId(),
+        title: 'Maintenance',
+        icon: IconSettings,
+        href: 'https://modernize-react.adminmart.com/auth/maintenance',
+        chip: 'Pro',
+      },
+    ]
   },
-  {
-    id: uniqueId(),
-    title: 'Error',
-    icon: IconAlertCircle,
-    href: 'https://modernize-react.adminmart.com/400',
-    chip: 'Pro',
-  },
-  {
-    id: uniqueId(),
-    title: 'Maintenance',
-    icon: IconSettings,
-    href: 'https://modernize-react.adminmart.com/auth/maintenance',
-    chip: 'Pro',
-  },
-
   {
     navlabel: true,
     subheader: 'Other',
@@ -1199,39 +1244,7 @@ const Menuitems = [
     href: 'https://google.com',
     chip: 'Pro',
   },
-  {
-    navlabel: true,
-    subheader: 'Utilities',
-  },
-  {
-    id: uniqueId(),
-    title: 'Typography',
-    icon: IconTypography,
-    href: '/ui/typography',
-  },
-  {
-    id: uniqueId(),
-    title: 'Shadow',
-    icon: IconCopy,
-    href: '/ui/shadow',
-  },
-
-  {
-    navlabel: true,
-    subheader: 'Extra',
-  },
-  {
-    id: uniqueId(),
-    title: 'Icons',
-    icon: IconMoodHappy,
-    href: '/icons',
-  },
-  {
-    id: uniqueId(),
-    title: 'Sample Page',
-    icon: IconAperture,
-    href: '/sample-page',
-  },
+  
 ];
 
 export default Menuitems;

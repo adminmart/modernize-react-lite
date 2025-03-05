@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router';
@@ -54,7 +49,7 @@ const NavItem = ({ item, level, pathDirect, onClick, hideMenu }) => {
         component={item.external ? 'a' : NavLink}
         to={item.href}
         href={item.external ? item.href : ''}
-        target={item.chip?"blank" :"_self"}
+        target={item.chip ? "blank" : "_self"}
         disabled={item.disabled}
         selected={pathDirect === item.href}
         onClick={onClick}
@@ -83,17 +78,17 @@ const NavItem = ({ item, level, pathDirect, onClick, hideMenu }) => {
 
         {!item.chip || hideMenu ? null : (
           <Chip
-            color={"secondary"}
             variant={'filled'}
             size="small"
             label={"Pro"}
             sx={{
-              height: 'fit-content', 
-             
-              borderRadius:"7px",
+              height: 'fit-content',
+              backgroundColor: 'secondary.light',
+              color: 'secondary.main',
+              borderRadius: "7px",
               '& .MuiChip-label': {
-                fontSize:"10px",
-                paddingX:"10px",
+                fontSize: "10px",
+                paddingX: "10px",
               },
             }}
           />

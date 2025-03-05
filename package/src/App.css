@@ -4,3 +4,7 @@
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.MuiDrawer-paperAnchorDockedLeft.css-1bdav0j{
     top: 65px !important;
 }
+
+.MuiOutlinedInput-notchedOutline {
+    border-color: #efefef !important;
+}
