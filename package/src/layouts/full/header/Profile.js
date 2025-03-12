@@ -8,10 +8,10 @@ import {
   IconButton,
   MenuItem,
   ListItemIcon,
-  ListItemText
+  ListItemText, Typography
 } from '@mui/material';
 
-import { IconListCheck, IconMail, IconUser } from '@tabler/icons-react';
+import { IconDashboard, IconMail, IconUser } from '@tabler/icons-react';
 
 import ProfileImg from 'src/assets/images/profile/user-1.jpg';
 
@@ -66,22 +66,34 @@ const Profile = () => {
         }}
       >
         <MenuItem>
-          <ListItemIcon>
-            <IconUser width={20} />
-          </ListItemIcon>
-          <ListItemText>My Profile</ListItemText>
+          <Link to='/form-layouts'>
+            <Box display='flex' alignItems='center'>
+              <ListItemIcon>
+                <IconUser width={20} />
+              </ListItemIcon>
+              <ListItemText><Typography variant='subtitle1' color='textPrimary'>My Profile</Typography></ListItemText>
+            </Box>
+          </Link>
         </MenuItem>
         <MenuItem>
-          <ListItemIcon>
-            <IconMail width={20} />
-          </ListItemIcon>
-          <ListItemText>My Account</ListItemText>
+          <Link to='/tables/basic-table'>
+            <Box display='flex' alignItems='center'>
+              <ListItemIcon>
+                <IconMail width={20} />
+              </ListItemIcon>
+              <ListItemText><Typography variant='subtitle1' color='textPrimary'>Performance</Typography></ListItemText>
+            </Box>
+          </Link>
         </MenuItem>
         <MenuItem>
-          <ListItemIcon>
-            <IconListCheck width={20} />
-          </ListItemIcon>
-          <ListItemText>My Tasks</ListItemText>
+          <Link to='/dashboard'>
+            <Box display='flex' alignItems='center'>
+              <ListItemIcon>
+                <IconDashboard width={20} />
+              </ListItemIcon>
+              <ListItemText><Typography variant='subtitle1' color='textPrimary'>My Dashboard</Typography></ListItemText>
+            </Box>
+          </Link>
         </MenuItem>
         <Box mt={1} py={1} px={2}>
           <Button to="/auth/login" variant="outlined" color="primary" component={Link} fullWidth>

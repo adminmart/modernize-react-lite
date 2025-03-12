@@ -2,13 +2,13 @@ import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import img1 from 'src/assets/images/backgrounds/rocket.png';
 
-export const Upgrade = () => {
+const Upgrade = () => {
     return (
         <Box
             display={'flex'}
             alignItems="center"
             gap={2}
-            sx={{ m: 3, p: 3, bgcolor: `${'primary.light'}`, borderRadius: '8px' }}
+            sx={{ my: 3, p: 3, bgcolor: `${'primary.light'}`, borderRadius: '8px' }}
         >
             <>
                 <Box>
@@ -24,3 +24,5 @@ export const Upgrade = () => {
         </Box>
     );
 };
+
+export default Upgrade;

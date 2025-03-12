@@ -69,9 +69,62 @@ const baselightTheme = createTheme({
     divider: '#e5eaef',
   },
   typography,
-  shadows
+  shadows,
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        a: {
+          textDecoration: "none",
+        },
+        '.simplebar-scrollbar:before': {
+          background: " #DFE5EF!important"
+        },
+      }
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "7px",
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: 'none'
+          }
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: '0 9px 17.5px rgb(0,0,0,0.05)'
+        },
+      },
+    },
+    MuiFab: {
+      styleOverrides: {
+        root: {
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: 'none'
+          }
+        },
+      },
+    },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#e5eaef !important',
+          },
+          borderRadius: "7px",
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: '#5D87FF !important'
+          }
+        },
+      },
+    },
+  }
 },
-  
+
 );
 
 export { baselightTheme };

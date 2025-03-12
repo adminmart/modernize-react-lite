@@ -8,3 +8,9 @@
 .MuiOutlinedInput-notchedOutline {
     border-color: #efefef !important;
 }
+
+.MuiTypography-root,
+.MuiListSubheader-root,
+.MuiChip-label {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}

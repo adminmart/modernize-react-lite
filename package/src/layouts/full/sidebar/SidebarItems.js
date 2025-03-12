@@ -1,52 +1,96 @@
-import React from 'react';
-import Menuitems from './MenuItems';
-import { useLocation } from 'react-router';
-import { Box, List, } from '@mui/material';
-import NavGroup from './NavGroup/NavGroup';
-import NavItem from './NavItem';
-import NavCollapse from './NavCollapse';
+import React from "react";
+import { useLocation, NavLink } from 'react-router';
+import { Box } from "@mui/material";
+import {
+  Logo,
+  Sidebar as MUI_Sidebar,
+  Menu,
+  MenuItem,
+  Submenu,
+} from "react-mui-sidebar";
+import { IconPoint } from '@tabler/icons-react';
+import Menuitems from "./MenuItems";
+import logoicn from "../../../assets/images/logos/dark1-logo.svg";
+import Upgrade from "./Upgrade";
+
+const renderMenuItems = (items, pathDirect) => {
+
+
+  return items.map((item) => {
+
+
+    const Icon = item.icon ? item.icon : IconPoint;
+    const itemIcon = <Icon stroke={1.5} size="1.3rem" />;
+
+    if (item.subheader) {
+      // Display Subheader
+
+      return (
+        <Box sx={{ margin: "0 -24px", textTransform: 'uppercase' }} key={item.subheader}>
+          <Menu
+            subHeading={item.subheader}
+            key={item.subheader}
+
+          />
+        </Box>
+      );
+    }
+
+    //If the item has children (submenu)
+    if (item.children) {
+      return (
+        <Submenu
+          key={item.id}
+          title={item.title}
+          icon={itemIcon}
+          borderRadius='7px'
+        >
+          {renderMenuItems(item.children, pathDirect)}
+        </Submenu>
+      );
+    }
+
+    // If the item has no children, render a MenuItem
+
+    return (
+      <MenuItem
+        key={item.id}
+        isSelected={pathDirect === item?.href}
+        icon={itemIcon}
+        component={NavLink}
+        link={item.href ? item.href : "#"}
+        target={item.href && item.href.startsWith("https") ? "_blank" : "_self"}
+        badge={!!item.chip}
+        badgeContent={item.chip || ""}
+        badgeColor='secondary'
+        badgeTextColor="#49BEFF"
+        disabled={item.disabled}
+        borderRadius='7px'
+      >
+        {item.title}
+      </MenuItem>
+
+
+    );
+  });
+};
 
 const SidebarItems = () => {
-  const { pathname } = useLocation();
-  const pathDirect = pathname;
-  const pathWithoutLastPart = pathname.slice(0, pathname.lastIndexOf('/'));
-
+  const location = useLocation();
+  const pathDirect = location.pathname;
 
   return (
-    <Box sx={{ px: 3 }}>
-      <List sx={{ pt: 0 }} className="sidebarNav">
-        {Menuitems.map((item, index) => {
-          // {/********SubHeader**********/}
-          if (item.subheader) {
-            return <NavGroup item={item}  key={item.subheader} />;
-
-            // {/********If Sub Menu**********/}
-            /* eslint no-else-return: "off" */
-          } else if (item.children) {
-            return (
-              <NavCollapse
-                menu={item}
-                pathDirect={pathDirect}
-                pathWithoutLastPart={pathWithoutLastPart}
-                level={1}
-                key={item.id}
-                chip={item.chip}
-              />
-            );
-
-            // {/********If Sub No Menu**********/}
-          } else {
-            return (
-              <NavItem
-                item={item}
-                key={item.id}
-                pathDirect={pathDirect}
-              />
-            );
-          }
-        })}
-      </List>
+    <Box sx={{ px: "24px", overflowX: 'hidden' }}>
+      <MUI_Sidebar width={"100%"} showProfile={false} themeColor={"#5D87FF"} themeSecondaryColor={'#49BEFF1a'}>
+        <Box sx={{ margin: "0 -24px" }}>
+          <Logo img={logoicn} component={NavLink} to="/" >Flexy</Logo>
+        </Box>
+        {renderMenuItems(Menuitems, pathDirect)}
+      </MUI_Sidebar>
+      <Upgrade />
     </Box>
   );
 };
+
 export default SidebarItems;
+

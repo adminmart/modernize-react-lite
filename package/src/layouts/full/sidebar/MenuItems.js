@@ -59,7 +59,7 @@ import {
   IconChartArcs3,
   IconListTree,
   IconLayoutSidebar,
-  IconLock,
+  IconLock, IconAlignBoxLeftBottom, IconCheckbox, IconRadar, IconSlideshow, IconCaretUpDown, IconTable, IconForms
 } from '@tabler/icons-react';
 
 
@@ -155,6 +155,60 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
+    title: 'Autocomplete',
+    icon: IconTypography,
+    href: '/form-elements/autocomplete',
+  },
+  {
+    id: uniqueId(),
+    title: 'Buttons',
+    icon: IconAlignBoxLeftBottom,
+    href: '/form-elements/button',
+  },
+  {
+    id: uniqueId(),
+    title: 'Checkbox',
+    icon: IconCheckbox,
+    href: '/form-elements/checkbox',
+  },
+  {
+    id: uniqueId(),
+    title: 'Radio',
+    icon: IconRadar,
+    href: '/form-elements/radio',
+  },
+  {
+    id: uniqueId(),
+    title: 'Slider',
+    icon: IconSlideshow,
+    href: '/form-elements/slider',
+  },
+  {
+    id: uniqueId(),
+    title: 'Switch',
+    icon: IconCaretUpDown,
+    href: '/form-elements/switch',
+  },
+  {
+    id: uniqueId(),
+    title: 'Tables',
+    icon: IconTable,
+    href: '/tables/basic-table',
+  },
+  {
+    id: uniqueId(),
+    title: 'Form Layouts',
+    icon: IconForms,
+    href: '/form-layouts',
+  },
+  {
+    id: uniqueId(),
+    title: 'Sample Page',
+    icon: IconAperture,
+    href: '/sample-page',
+  },
+  {
+    id: uniqueId(),
     title: 'Typography',
     icon: IconTypography,
     href: '/ui/typography',
@@ -165,23 +219,7 @@ const Menuitems = [
     icon: IconCopy,
     href: '/ui/shadow',
   },
-
-  {
-    navlabel: true,
-    subheader: 'Extra',
-  },
-  {
-    id: uniqueId(),
-    title: 'Icons',
-    icon: IconMoodHappy,
-    href: '/icons',
-  },
-  {
-    id: uniqueId(),
-    title: 'Sample Page',
-    icon: IconAperture,
-    href: '/sample-page',
-  },
+ 
   {
     navlabel: true,
     subheader: 'Apps',
@@ -1244,7 +1282,7 @@ const Menuitems = [
     href: 'https://google.com',
     chip: 'Pro',
   },
-  
+
 ];
 
 export default Menuitems;
