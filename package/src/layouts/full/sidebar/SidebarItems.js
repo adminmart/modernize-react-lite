@@ -1,6 +1,6 @@
 import React from "react";
-import { useLocation, NavLink } from 'react-router';
-import { Box } from "@mui/material";
+import { useLocation, NavLink, Link } from 'react-router';
+import { Box, Typography } from "@mui/material";
 import {
   Logo,
   Sidebar as MUI_Sidebar,
@@ -56,18 +56,27 @@ const renderMenuItems = (items, pathDirect) => {
       <MenuItem
         key={item.id}
         isSelected={pathDirect === item?.href}
-        icon={itemIcon}
-        component={NavLink}
-        link={item.href ? item.href : "#"}
+        borderRadius='7px'
+        icon={
+          item.icon ? (
+            <Icon icon={"solar:" + item.icon} width="20" height="20" />
+          ) : (
+            <Icon icon="mdi:circle" width="6" height="6" />
+          )
+        }
+        component="div"
+        link={item.href && item.href !== "" ? item.href : undefined}
         target={item.href && item.href.startsWith("https") ? "_blank" : "_self"}
-        badge={!!item.chip}
+        badge={item.chip ? true : false}
         badgeContent={item.chip || ""}
         badgeColor='secondary'
-        badgeTextColor="#49BEFF"
+        badgeTextColor="#1b84ff"
         disabled={item.disabled}
-        borderRadius='7px'
       >
-        {item.title}
+        <Link to={item.href} target={item.href.startsWith("https") ? "_blank" : "_self"} rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <Typography component='span' color={pathDirect === item?.href ? '#fff' : 'inherit'}>
+            {item.title}</Typography>
+        </Link>
       </MenuItem>
 
 
