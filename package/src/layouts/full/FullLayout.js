@@ -7,17 +7,18 @@ import Header from './header/Header';
 import Sidebar from './sidebar/Sidebar';
 import { Outlet } from "react-router";
 import Topbar from "./header/Topbar";
+import Footer from "./footer/Footer";
 
 const MainWrapper = styled('div')(() => ({
   display: 'flex',
-  minHeight: '100vh',
+  //minHeight: '100vh',
   width: '100%',
 }));
 
 const PageWrapper = styled('div')(() => ({
   display: 'flex',
   flexGrow: 1,
-  paddingBottom: '60px',
+ // paddingBottom: '60px',
   flexDirection: 'column',
   zIndex: 1,
   backgroundColor: 'transparent',
@@ -68,13 +69,14 @@ const FullLayout = () => {
           {/* ------------------------------------------- */}
           {/* Page Route */}
           {/* ------------------------------------------- */}
-          <Box sx={{ minHeight: 'calc(100vh - 170px)' }}>
+          <Box sx={{ minHeight: 'calc(100vh - 250px)' }}>
             <Outlet />
           </Box>
           {/* ------------------------------------------- */}
           {/* End Page */}
           {/* ------------------------------------------- */}
         </Container>
+        <Footer />
       </PageWrapper>
     </MainWrapper>
     </>

@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { IconExternalLink , IconShoppingCart} from '@tabler/icons-react';
+import { IconExternalLink, IconShoppingCart } from '@tabler/icons-react';
 import { Link } from 'react-router';
 
 const StyledMenu = styled((props) => (
@@ -52,46 +52,46 @@ const StyledMenu = styled((props) => (
 
 // Styling Link within MenuItem
 const StyledLink = styled(Link)(({ theme }) => ({
-    textDecoration: 'none', // Remove underline
-    color: 'inherit', // Ensure it inherits the primary text color
-    '&:hover': {
-      color: theme.palette.primary.main, // Ensure no underline on hover
-    },
-  }));
+  textDecoration: 'none', // Remove underline
+  color: 'inherit', // Ensure it inherits the primary text color
+  '&:hover': {
+    color: theme.palette.primary.main, // Ensure no underline on hover
+  },
+}));
 
 
 
 const MenuItems = [
-    {
-        id:1,
-        title:"Bootstrap Preview",
-        href:"https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56"
-    },
-    {
-        id:2,
-        title:"Angular Preview",
-        href:"https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56"
-    },
-    {
-        id:3,
-        title:"VueJs Preview",
-        href:"https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56"
-    },
-    {
-        id:4,
-        title:"NextJs Preview",
-        href:"https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56"
-    },
-    {
-        id:5,
-        title:"React Preview",
-        href:"https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56"
-    },
-    {
-        id:6,
-        title:"Tailwind Preview",
-        href:"https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56"
-    },
+  {
+    id: 1,
+    title: "Bootstrap Preview",
+    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56"
+  },
+  {
+    id: 2,
+    title: "Angular Preview",
+    href: "https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56"
+  },
+  {
+    id: 3,
+    title: "VueJs Preview",
+    href: "https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56"
+  },
+  {
+    id: 4,
+    title: "NextJs Preview",
+    href: "https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56"
+  },
+  {
+    id: 5,
+    title: "React Preview",
+    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56"
+  },
+  {
+    id: 6,
+    title: "Tailwind Preview",
+    href: "https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56"
+  },
 
 ]
 
@@ -107,20 +107,20 @@ export default function BuyNowDropdown() {
 
   return (
     <div>
-      <Button  id="demo-customized-button"
+      <Button id="demo-customized-button"
         aria-controls={open ? 'demo-customized-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         disableElevation
         onClick={handleClick}
         endIcon={<KeyboardArrowDownIcon />}
-        startIcon={<IconShoppingCart size={18} />} 
-        variant="contained" color="primary"  
-        target="_blank" 
-        sx={{borderRadius:"7px"}}
-        >
-         Buy Now
-          </Button>
+        startIcon={<IconShoppingCart size={18} />}
+        variant="contained" color="primary"
+        target="_blank"
+        sx={{ borderRadius: "7px" }}
+      >
+        Buy Now
+      </Button>
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
@@ -131,14 +131,14 @@ export default function BuyNowDropdown() {
         onClose={handleClose}
       >
         {
-            MenuItems.map((item) => {
-                return (
-                    <StyledLink key={item.id} to={item.href} ><MenuItem sx={{gap:"4px" , padding:"8px 16px"}} onClick={handleClose} disableRipple>
-                    <IconExternalLink size={18} />
-                     {item.title}
-                  </MenuItem></StyledLink>
-                )
-            })
+          MenuItems.map((item) => {
+            return (
+              <StyledLink key={item.id} to={item.href} target='_blank' ><MenuItem sx={{ gap: "4px", padding: "8px 16px" }} onClick={handleClose} disableRipple>
+                <IconExternalLink size={18} />
+                {item.title}
+              </MenuItem></StyledLink>
+            )
+          })
         }
       </StyledMenu>
     </div>
