@@ -64,33 +64,33 @@ const StyledLink = styled(Link)(({ theme }) => ({
 const MenuItems = [
   {
     id: 1,
-    title: "Bootstrap Preview",
-    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56"
+    title: "Buy Bootstrap Version",
+    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-price-section"
   },
   {
     id: 2,
-    title: "Angular Preview",
-    href: "https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56"
+    title: "Buy Angular Version",
+    href: "https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56#product-price-section"
   },
   {
     id: 3,
-    title: "VueJs Preview",
-    href: "https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56"
+    title: "Buy VueJs Version",
+    href: "https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56#product-price-section"
   },
   {
     id: 4,
-    title: "NextJs Preview",
-    href: "https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56"
+    title: "Buy NextJs Version",
+    href: "https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56#product-price-section"
   },
   {
     id: 5,
-    title: "React Preview",
-    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56"
+    title: "Buy React Version",
+    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-price-section"
   },
   {
     id: 6,
-    title: "Tailwind Preview",
-    href: "https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56"
+    title: "Buy Tailwind Version",
+    href: "https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56#product-price-section"
   },
 
 ]

@@ -12,12 +12,12 @@ const Upgrade = () => {
         >
             <>
                 <Box>
-                    <Typography variant="h6" mb={1}>Unlimited Access</Typography>
-                    <Button color="primary" target="_blank" href="https://adminmart.com/product/modernize-react-mui-dashboard-template/?ref=56" variant="contained" aria-label="logout" size="small">
-                        Upgrade
+                    <Typography variant="h6" mb={1}>Check Pro Version</Typography>
+                    <Button color="primary" target="_blank" href="https://adminmart.com/product/modernize-react-mui-dashboard-template/?ref=56#product-demo-section" variant="contained" aria-label="logout" size="small">
+                        Check
                     </Button>
                 </Box>
-                <Box mt="-35px">
+                <Box sx={{marginTop:"-35px",marginRight: "-24px"}}>
                     <img alt="Remy Sharp" src={img1} width={100} />
                 </Box>
             </>
