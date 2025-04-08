@@ -64,8 +64,8 @@ const StyledLink = styled(Link)(({ theme }) => ({
 const MenuItems = [
   {
     id: 1,
-    title: "Buy Bootstrap Version",
-    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-price-section"
+    title: "Buy React Version",
+    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-price-section"
   },
   {
     id: 2,
@@ -84,8 +84,8 @@ const MenuItems = [
   },
   {
     id: 5,
-    title: "Buy React Version",
-    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-price-section"
+    title: "Buy Bootstrap Version",
+    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-price-section"
   },
   {
     id: 6,

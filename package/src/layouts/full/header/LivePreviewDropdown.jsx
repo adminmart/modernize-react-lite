@@ -84,8 +84,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
 const MenuItems = [
     {
         id:1,
-        title:"Bootstrap Preview",
-        href:"https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-demo-section"
+        title:"React Preview",
+        href:"https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-demo-section"
     },
     {
         id:2,
@@ -104,8 +104,8 @@ const MenuItems = [
     },
     {
         id:5,
-        title:"React Preview",
-        href:"https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-demo-section"
+        title:"Bootstrap Preview",
+        href:"https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-demo-section"
     },
     {
         id:6,
