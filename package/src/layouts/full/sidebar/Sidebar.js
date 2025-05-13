@@ -29,7 +29,7 @@ const Sidebar = (props) => {
             sx: {
               width: sidebarWidth,
               boxSizing: 'border-box',
-              top: '64px',
+              top: '72px',
             },
           }}
         >

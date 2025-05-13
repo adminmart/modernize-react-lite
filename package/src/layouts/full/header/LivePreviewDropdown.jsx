@@ -7,6 +7,16 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { IconDeviceLaptop, IconExternalLink } from '@tabler/icons-react';
 import { Link } from 'react-router';
 
+
+import img1 from 'src/assets/images/svgs/react-cat-icon.svg';
+import img2 from 'src/assets/images/svgs/angular-cat-icon.svg';
+import img3 from 'src/assets/images/svgs/vue-cat-icon.svg';
+import img4 from 'src/assets/images/svgs/next-cat-icon.svg';
+import img5 from 'src/assets/images/svgs/bt-cat-icon.svg';
+import img6 from 'src/assets/images/svgs/nuxt-cat-icon.svg';
+import img7 from 'src/assets/images/svgs/tailwindcss.svg';
+
+
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
@@ -22,14 +32,14 @@ const StyledMenu = styled((props) => (
   />
 ))(({ theme }) => ({
   '& .MuiPaper-root': {
-    borderRadius: 6,
+    borderRadius: 7,
     marginTop: theme.spacing(1),
-    minWidth: 180,
-    color: 'rgb(55, 65, 81)',
+    minWidth: 200,
+    color: '#000c29',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
-      padding: '10px 0',
+      padding: '16px',
     },
     '& .MuiMenuItem-root': {
       '& .MuiSvgIcon-root': {
@@ -52,66 +62,76 @@ const StyledMenu = styled((props) => (
 
 // Styling Link within MenuItem
 const StyledLink = styled(Link)(({ theme }) => ({
-    textDecoration: 'none', // Remove underline
-    color: 'inherit', // Ensure it inherits the primary text color
-    '&:hover': {
-      color: theme.palette.primary.main, // Ensure no underline on hover
-    },
-  }));
+  textDecoration: 'none',
+  color: '#000c29',
+  borderRadius: '4px',
+  '&:hover': {
+    backgroundColor: '#000c290d',
+  },
+}));
 
 // Styled button with outline style
 const StyledButton = styled(Button)(({ theme }) => ({
-  border: `1px solid ${theme.palette.primary.main}`,  // Border only
-  color: theme.palette.primary.main,                   // Text color
-  padding: "6px 16px",
+  border: `1px solid rgba(255,255,255,.4)`,
+  fontSize: '16px',
+  color: '#ffffff',
+  padding: '5px 16px',
   textTransform: 'none',
   display: 'flex',
-  borderRadius: "7px",
-  justifyContent: 'space-between', // Ensure text and icon are spaced
+  borderRadius: '4px',
+  justifyContent: 'space-between',
   alignItems: 'center',
   '&:hover': {
-    backgroundColor: theme.palette.primary.main,
-    color: theme.palette.primary.contrastText // Light background on hover
+    backgroundColor: '#5d87ff',
   },
-  "& .MuiButton-startIcon": {
-      marginRight: "4px",
-    },
   '& .MuiButton-endIcon': {
-    marginLeft: '4px', // Push icon to the right
+    marginLeft: '4px',
   },
 }));
 
 const MenuItems = [
-    {
-        id:1,
-        title:"React Preview",
-        href:"https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-demo-section"
-    },
-    {
-        id:2,
-        title:"Angular Preview",
-        href:"https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56#product-demo-section"
-    },
-    {
-        id:3,
-        title:"VueJs Preview",
-        href:"https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56#product-demo-section"
-    },
-    {
-        id:4,
-        title:"NextJs Preview",
-        href:"https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56#product-demo-section"
-    },
-    {
-        id:5,
-        title:"Bootstrap Preview",
-        href:"https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-demo-section"
-    },
-    {
-        id:6,
-        title:"Tailwind Preview",
-        href:"https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56#product-demo-section"
-    },
+  {
+    id: 1,
+    img: img1,
+    title: "React Version",
+    href: "https://adminmart.com/product/modernize-react-mui-dashboard-theme/?ref=56#product-demo-section"
+  },
+  {
+    id: 2,
+    img: img2,
+    title: "Angular Version",
+    href: "https://adminmart.com/product/modernize-angular-material-dashboard/?ref=56#product-demo-section"
+  },
+  {
+    id: 3,
+    img: img3,
+    title: "VueJs Version",
+    href: "https://adminmart.com/product/modernize-vuetify-vue-admin-dashboard/?ref=56#product-demo-section"
+  },
+  {
+    id: 4,
+    img: img4,
+    title: "NextJs Version",
+    href: "https://adminmart.com/product/modernize-next-js-admin-dashboard/?ref=56#product-demo-section"
+  },
+  {
+    id: 5,
+    img: img5,
+    title: "Bootstrap Version",
+    href: "https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=56#product-demo-section"
+  },
+  {
+    id: 6,
+    img: img6,
+    title: "NuxtJs Version",
+    href: "https://adminmart.com/product/modernize-nuxt-js-admin-dashboard/?ref=56#product-demo-section"
+  },
+  {
+    id: 7,
+    img: img7,
+    title: "Tailwind Version",
+    href: "https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/?ref=56#product-demo-section"
+  },
 
 ]
 
@@ -129,7 +149,7 @@ export default function LivePreviewDropdown() {
     <div>
       <StyledButton
         id="demo-customized-button"
-        aria-controls={open ? 'demo-customized-menu' : undefined}
+        aria-controls={open ? 'demo-customized-menu' : undefined} 
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         variant="outlined"  // Outline button
@@ -143,21 +163,24 @@ export default function LivePreviewDropdown() {
       <StyledMenu
         id="demo-customized-menu"
         MenuListProps={{
-          'aria-labelledby': 'demo-customized-button',
+          'aria-labelledby': 'demo-customized-button', 
         }}
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
       >
         {
-            MenuItems.map((item) => {
-                return (
-                    <StyledLink key={item.id} to={item.href} target='_blank' ><MenuItem sx={{gap:"4px" , padding:"8px 16px"}} onClick={handleClose} disableRipple>
-                    <IconExternalLink size={18} />
-                     {item.title}
-                  </MenuItem></StyledLink>
-                )
-            })
+          MenuItems.map((item, index) => {
+            console.log(item, "test");
+            return (
+              <a target='_black' key={index} href={item.href}>
+                <MenuItem sx={{ gap: '12px', borderRadius: '7px', fontSize: '16px', color: '#000c29', padding: '12px 18px', ":hover": { backgroundColor: "#000c290d" } }} onClick={handleClose} disableRipple>
+                  <img src={item.img} width={18} alt="logo" />
+                  {item.title}
+                </MenuItem>
+              </a>
+            )
+          })
         }
       </StyledMenu>
     </div>
