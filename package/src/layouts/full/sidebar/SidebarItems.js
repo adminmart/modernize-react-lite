@@ -57,13 +57,7 @@ const renderMenuItems = (items, pathDirect) => {
         key={item.id}
         isSelected={pathDirect === item?.href}
         borderRadius='7px'
-        icon={
-          item.icon ? (
-            <Icon icon={"solar:" + item.icon} width="20" height="20" />
-          ) : (
-            <Icon icon="mdi:circle" width="6" height="6" />
-          )
-        }
+        icon={itemIcon}
         component="div"
         link={item.href && item.href !== "" ? item.href : undefined}
         target={item.href && item.href.startsWith("https") ? "_blank" : "_self"}

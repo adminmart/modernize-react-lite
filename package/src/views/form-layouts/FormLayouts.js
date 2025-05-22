@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import { Grid2 as Grid } from "@mui/material";
+import { Grid } from '@mui/material'
 
-import { FbDefaultForm } from "./fb-elements/index";
+import { FbDefaultForm } from './fb-elements/index'
 
 const FormLayouts = () => {
   return (
@@ -11,7 +11,7 @@ const FormLayouts = () => {
         <FbDefaultForm />
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default FormLayouts;
+export default FormLayouts

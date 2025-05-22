@@ -18,11 +18,10 @@ const lightTheme = createTheme({ palette: { mode: 'light' } });
 const Shadow = () => {
   return (
     <PageContainer title="Shadow" description="this is Shadow">
-
       <DashboardCard title="Shadow">
         <Grid container spacing={2}>
           {[lightTheme, darkTheme].map((theme, index) => (
-            <Grid item xs={6} key={index}>
+            <Grid key={index} size={6}>
               <ThemeProvider theme={theme}>
                 <Box
                   sx={{

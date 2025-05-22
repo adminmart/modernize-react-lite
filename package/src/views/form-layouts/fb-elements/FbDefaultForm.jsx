@@ -6,7 +6,7 @@ import {
   FormControlLabel,
   Checkbox,
   Button,
-  Grid2 as Grid,
+  Grid,
   RadioGroup,
   Radio,
   FormControl,

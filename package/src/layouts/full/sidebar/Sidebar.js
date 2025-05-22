@@ -25,12 +25,14 @@ const Sidebar = (props) => {
           anchor="left"
           open={props.isSidebarOpen}
           variant="permanent"
-          PaperProps={{
-            sx: {
-              width: sidebarWidth,
-              boxSizing: 'border-box',
-              top: '72px',
-            },
+          slotProps={{
+            paper: {
+              sx: {
+                width: sidebarWidth,
+                boxSizing: 'border-box',
+                top: '72px',
+              },
+            }
           }}
         >
           {/* ------------------------------------------- */}
@@ -54,14 +56,15 @@ const Sidebar = (props) => {
       open={props.isMobileSidebarOpen}
       onClose={props.onSidebarClose}
       variant="temporary"
-      PaperProps={{
-        sx: {
+      slotProps={{
+        paper: {
+          sx: {
 
-          boxShadow: (theme) => theme.shadows[8],
-        },
+            boxShadow: (theme) => theme.shadows[8],
+          },
+        }
       }}
     >
-
       <Scrollbar sx={{ height: "calc(100% - 73px)" }}>
         {/* ------------------------------------------- */}
         {/* Sidebar For Mobile */}
@@ -69,7 +72,6 @@ const Sidebar = (props) => {
         <SidebarItems />
       </Scrollbar>
       <Upgrade />
-
     </Drawer>
   );
 };

@@ -1,65 +1,63 @@
-import React from "react";
+import React from 'react'
 import {
-  Grid2 as Grid,
+  Grid,
   Box,
   Checkbox,
   FormGroup,
   FormControlLabel,
   FormControl,
-} from "@mui/material";
+} from '@mui/material'
 
-import BaseCard from "../../components/BaseCard/BaseCard";
+import BaseCard from '../../components/BaseCard/BaseCard'
 
-import CheckBoxOutlineBlankOutlinedIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined';
-import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import CheckBoxOutlineBlankOutlinedIcon from '@mui/icons-material/CheckBoxOutlineBlankOutlined'
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined'
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined'
 
 const ExCheckbox = () => {
   // 2
-  const [checked, setChecked] = React.useState(true);
+  const [checked, setChecked] = React.useState(true)
 
   const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
+    setChecked(event.target.checked)
+  }
   return (
     <Box>
       <Grid container spacing={3}>
         {/* ------------------------- row 1 ------------------------- */}
         <Grid
-          item size={{ xs: 12, lg: 4, sm: 6 }}
-
+          item
+          size={{ xs: 12, lg: 4, sm: 6 }}
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-          }}
-        >
-          <BaseCard title="Default Checkbox">
+            display: 'flex',
+            alignItems: 'stretch',
+          }}>
+          <BaseCard title='Default Checkbox'>
             <Box
               sx={{
-                textAlign: "center",
-              }}
-            >
+                textAlign: 'center',
+              }}>
               <Checkbox
                 checked={checked}
                 onChange={handleChange}
-                inputprops={{ "aria-label": "primary checkbox" }}
+                inputprops={{ 'aria-label': 'primary checkbox' }}
               />
 
               <Checkbox
                 disabled
                 checked
-                inputprops={{ "aria-label": "disabled checked checkbox" }}
+                inputprops={{ 'aria-label': 'disabled checked checkbox' }}
               />
               <Checkbox
                 defaultChecked
                 indeterminate
-                inputprops={{ "aria-label": "indeterminate checkbox" }}
+                inputprops={{ 'aria-label': 'indeterminate checkbox' }}
               />
               <Checkbox
                 defaultChecked
-                color="default"
-                inputprops={{ "aria-label": "checkbox with default color" }}
+                color='default'
+                inputprops={{ 'aria-label': 'checkbox with default color' }}
               />
             </Box>
           </BaseCard>
@@ -69,50 +67,48 @@ const ExCheckbox = () => {
           item
           size={{ xs: 12, lg: 4, sm: 6 }}
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-          }}
-        >
-          <BaseCard title="Default with Colors">
+            display: 'flex',
+            alignItems: 'stretch',
+          }}>
+          <BaseCard title='Default with Colors'>
             <Box
               sx={{
-                textAlign: "center",
-              }}
-            >
+                textAlign: 'center',
+              }}>
               <Checkbox
                 defaultChecked
-                color="primary"
-                inputprops={{ "aria-label": "checkbox with default color" }}
+                color='primary'
+                inputprops={{ 'aria-label': 'checkbox with default color' }}
               />
               <Checkbox
                 defaultChecked
-                color="secondary"
-                inputprops={{ "aria-label": "checkbox with default color" }}
+                color='secondary'
+                inputprops={{ 'aria-label': 'checkbox with default color' }}
               />
               <Checkbox
                 defaultChecked
                 sx={{
-                  color: "success.main",
-                  "&.Mui-checked": {
-                    color: "success.main",
+                  color: 'success.main',
+                  '&.Mui-checked': {
+                    color: 'success.main',
                   },
                 }}
               />
               <Checkbox
                 defaultChecked
                 sx={{
-                  color: "error.main",
-                  "&.Mui-checked": {
-                    color: "error.main",
+                  color: 'error.main',
+                  '&.Mui-checked': {
+                    color: 'error.main',
                   },
                 }}
               />
               <Checkbox
                 defaultChecked
                 sx={{
-                  color: "warning.main",
-                  "&.Mui-checked": {
-                    color: "warning.main",
+                  color: 'warning.main',
+                  '&.Mui-checked': {
+                    color: 'warning.main',
                   },
                 }}
               />
@@ -124,48 +120,48 @@ const ExCheckbox = () => {
           item
           size={{ xs: 12, lg: 4, sm: 6 }}
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-          }}
-        >
-          <BaseCard title="Sizes & Custom icon">
+            display: 'flex',
+            alignItems: 'stretch',
+          }}>
+          <BaseCard title='Sizes & Custom icon'>
             <Box>
               <FormGroup
                 row
                 sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}>
                 <FormControlLabel
                   control={
                     <Checkbox
                       icon={<CheckBoxOutlineBlankOutlinedIcon />}
                       checkedIcon={<CheckBoxOutlinedIcon />}
-                      name="checkednormal"
+                      name='checkednormal'
                     />
                   }
-                  label="Normal Size"
+                  label='Normal Size'
                 />
                 <FormControlLabel
                   control={
                     <Checkbox
-                      icon={<CheckBoxOutlineBlankOutlinedIcon fontSize="small" />}
-                      checkedIcon={<CheckBoxOutlinedIcon fontSize="small" />}
-                      name="checkedsmall"
+                      icon={
+                        <CheckBoxOutlineBlankOutlinedIcon fontSize='small' />
+                      }
+                      checkedIcon={<CheckBoxOutlinedIcon fontSize='small' />}
+                      name='checkedsmall'
                     />
                   }
-                  label="Small size"
+                  label='Small size'
                 />
                 <FormControlLabel
                   control={
                     <Checkbox
                       icon={<FavoriteOutlinedIcon />}
                       checkedIcon={<FavoriteBorderOutlinedIcon />}
-                      name="checkedH"
+                      name='checkedH'
                     />
                   }
-                  label="Heart"
+                  label='Heart'
                 />
               </FormGroup>
             </Box>
@@ -174,50 +170,48 @@ const ExCheckbox = () => {
 
         {/* ------------------------- row 1 ------------------------- */}
         <Grid
-          item size={{ xs: 12, lg: 6, sm: 6 }}
+          item
+          size={{ xs: 12, lg: 6, sm: 6 }}
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-          }}
-        >
-          <BaseCard title="Placement">
+            display: 'flex',
+            alignItems: 'stretch',
+          }}>
+          <BaseCard title='Placement'>
             <FormControl
-              component="fieldset"
+              component='fieldset'
               sx={{
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
               <FormGroup
-                aria-label="position"
+                aria-label='position'
                 row
                 sx={{
-                  justifyContent: "center",
-                }}
-              >
+                  justifyContent: 'center',
+                }}>
                 <FormControlLabel
-                  value="top"
-                  control={<Checkbox color="primary" />}
-                  label="Top"
-                  labelPlacement="top"
+                  value='top'
+                  control={<Checkbox color='primary' />}
+                  label='Top'
+                  labelPlacement='top'
                 />
                 <FormControlLabel
-                  value="start"
-                  control={<Checkbox color="primary" />}
-                  label="Start"
-                  labelPlacement="start"
+                  value='start'
+                  control={<Checkbox color='primary' />}
+                  label='Start'
+                  labelPlacement='start'
                 />
                 <FormControlLabel
-                  value="bottom"
-                  control={<Checkbox color="primary" />}
-                  label="Bottom"
-                  labelPlacement="bottom"
+                  value='bottom'
+                  control={<Checkbox color='primary' />}
+                  label='Bottom'
+                  labelPlacement='bottom'
                 />
                 <FormControlLabel
-                  value="end"
-                  control={<Checkbox color="primary" />}
-                  label="End"
-                  labelPlacement="end"
+                  value='end'
+                  control={<Checkbox color='primary' />}
+                  label='End'
+                  labelPlacement='end'
                 />
               </FormGroup>
             </FormControl>
@@ -229,84 +223,82 @@ const ExCheckbox = () => {
           item
           size={{ xs: 12, lg: 6, sm: 6 }}
           sx={{
-            display: "flex",
-            alignItems: "stretch",
-          }}
-        >
-          <BaseCard title="Color with Label">
+            display: 'flex',
+            alignItems: 'stretch',
+          }}>
+          <BaseCard title='Color with Label'>
             <Box
               sx={{
-                textAlign: "center",
-              }}
-            >
+                textAlign: 'center',
+              }}>
               <FormControlLabel
-                value="end"
-                control={<Checkbox color="primary" defaultChecked />}
-                label="Primary"
-                labelPlacement="end"
+                value='end'
+                control={<Checkbox color='primary' defaultChecked />}
+                label='Primary'
+                labelPlacement='end'
               />
               <FormControlLabel
-                value="end"
-                control={<Checkbox color="secondary" defaultChecked />}
-                label="Secondary"
-                labelPlacement="end"
+                value='end'
+                control={<Checkbox color='secondary' defaultChecked />}
+                label='Secondary'
+                labelPlacement='end'
               />
               <FormControlLabel
-                value="end"
+                value='end'
                 control={
                   <Checkbox
                     defaultChecked
                     sx={{
-                      color: "success.main",
-                      "&.Mui-checked": {
-                        color: "success.main",
+                      color: 'success.main',
+                      '&.Mui-checked': {
+                        color: 'success.main',
                       },
                     }}
                   />
                 }
-                label="Success"
-                labelPlacement="end"
+                label='Success'
+                labelPlacement='end'
               />
 
               <FormControlLabel
-                value="end"
+                value='end'
                 control={
                   <Checkbox
                     defaultChecked
                     sx={{
-                      color: "error.main",
-                      "&.Mui-checked": {
-                        color: "error.main",
+                      color: 'error.main',
+                      '&.Mui-checked': {
+                        color: 'error.main',
                       },
                     }}
                   />
                 }
-                label="Danger"
-                labelPlacement="end"
+                label='Danger'
+                labelPlacement='end'
               />
 
               <FormControlLabel
-                value="end"
+                value='end'
                 control={
                   <Checkbox
                     defaultChecked
                     sx={{
-                      color: "warning.main",
-                      "&.Mui-checked": {
-                        color: "warning.main",
+                      color: 'warning.main',
+                      '&.Mui-checked': {
+                        color: 'warning.main',
                       },
                     }}
                   />
                 }
-                label="Warning"
-                labelPlacement="end"
+                label='Warning'
+                labelPlacement='end'
               />
             </Box>
           </BaseCard>
         </Grid>
       </Grid>
     </Box>
-  );
-};
+  )
+}
 
-export default ExCheckbox;
+export default ExCheckbox
