@@ -12,24 +12,23 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@iconify/react": "^6.0.0",
     "@mui/icons-material": "^7.1.0",
     "@mui/lab": "^7.0.0-beta.12",
     "@mui/material": "^7.1.0",
     "@mui/system": "^7.1.0",
-    "@iconify/react": "^6.0.0",
     "@svgr/rollup": "^8.1.0",
     "@tabler/icons-react": "^3.33.0",
     "apexcharts": "^4.7.0",
     "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
-    "react": "^19.0.0",
-    "react-mui-sidebar": "^1.6.3",
+    "react": "^19.2.6",
     "react-apexcharts": "^1.7.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.2.6",
     "react-helmet": "^6.1.0",
-    "simplebar-react": "^3.3.0",
-    "react-router": "^7.0.2"
-    
+    "react-mui-sidebar": "^1.6.3",
+    "react-router": "^7.0.2",
+    "simplebar-react": "^3.3.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.4",
